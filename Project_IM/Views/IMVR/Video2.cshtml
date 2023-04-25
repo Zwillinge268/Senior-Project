@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Project_IM.Models.Video>
+
+<div class="uppadding">
+    <div class="container">
+        <a class="btn btn-ct" href="@Url.Action("Video1", "IMVR")">嘗試範圍搜尋</a>
+    </div>
+</div>
+@{
+    ViewBag.Title = "影片導覽";
+    Html.RenderAction("_SelectPlace2");
+}
+@if (ViewBag.HaveData2 != false)
+{
+    <select name="list3" id="list3">
+        <option disabled selected>請選擇終點</option>
+        @foreach (var item in Model)
+        {
+            <option value="@Html.DisplayFor(modelItem => item.影片ID)">@Html.DisplayFor(modelItem => item.Place_name.地點名稱)</option>
+        }
+    </select>
+    <br />
+    <br />
+    <hr />
+}
+<div id="youtube" class="container text-center uppadding"></div>

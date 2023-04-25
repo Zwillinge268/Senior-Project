@@ -1,0 +1,444 @@
+﻿/*Reset css----------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    /*vertical-align: baseline;*/
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+/*button_design-------------------------------------------------------------*/
+
+.btn-ct {
+    color: #000;
+    background-color: rgba(75, 75, 75, 0.3);
+    box-shadow: 0 0 0.8em 0 rgba(0, 0, 0, 0.1);
+}
+
+    .btn-ct:hover {
+        background-color: rgba(75, 75, 75, 0.4);
+    }
+
+.custom-btnB {
+    width: 68%;
+    height: fit-content;
+    padding: 1.7%;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.custom-btnW {
+    width: 68%;
+    height: fit-content;
+    padding: 1.7%;
+    border: 2px solid #000;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.long {
+    width: 25%;
+    padding: 1.7% 0.5%;
+}
+
+.btnInfoB {
+    background: rgb(255, 255, 255, 0.00);
+    color: #fff;
+    z-index: 1;
+}
+
+    .btnInfoB:after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        background: #e0e5ec;
+        transition: all 0.3s ease;
+    }
+
+    .btnInfoB:hover {
+        color: #1493A6;
+    }
+
+        .btnInfoB:hover:after {
+            left: 0;
+            width: 100%;
+        }
+
+    .btnInfoB:active {
+        top: 2px;
+    }
+
+.btnInfoW {
+    background: rgb(255, 255, 255, 0.00);
+    color: #000;
+    z-index: 1;
+}
+
+    .btnInfoW:after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        direction: rtl;
+        z-index: -1;
+        background: #000;
+        transition: all 0.3s ease;
+    }
+
+    .btnInfoW:hover {
+        color: #fff;
+    }
+
+        .btnInfoW:hover:after {
+            left: auto;
+            right: 0;
+            width: 100%;
+        }
+
+    .btnInfoW:active {
+        top: 2px;
+    }
+
+/*select_design-----------------------------------------------------------------*/
+
+select {
+    /* Reset */
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    /* Personalize */
+    width: 20em;
+    height: 3em;
+    padding: 0 4em 0 1em;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center / 1.4em, linear-gradient(to left, rgba(75, 75, 75, 0.4) 3em, rgba(75, 75, 75, 0.3) 3em);
+    color: #000;
+    border-radius: 0.25em;
+    box-shadow: 0 0 0.8em 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+    select option {
+        color: inherit;
+        background-color: rgba(75, 75, 75, 0.3);
+    }
+
+    select:focus {
+        outline: none;
+    }
+
+/*Headroom.js-------------------------------------------------------------------*/
+
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+
+.headroom--pinned {
+    transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+/*Main-----------------------------------------------------------------------------*/
+
+.blueBG {
+    background-color: rgb(21,170,190);
+}
+
+.nav-block {
+    height: 65px;
+}
+
+nav ul li {
+    transform: translateY(0);
+    transition: transform 0.25s linear;
+}
+
+    nav ul li:hover {
+        transform: translateY(-6px);
+    }
+
+/*.navbar ul li ul {
+    color: #fff;
+    background-color: rgb(21,170,190);
+    text-align: center;
+}
+
+    .navbar ul li ul:hover {
+        transform: none;
+    }
+
+    .navbar ul li ul li {
+        line-height: 2.5rem;
+    }*/
+
+.svgIcon {
+    display: flex;
+    align-items: center;
+    margin-right: 36px;
+}
+
+@media(max-width:1200px) {
+    nav ul li {
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid #cccccc83;
+    }
+
+    .navbar .container {
+        justify-content: center;
+    }
+
+    .svgIcon {
+        justify-content: center;
+    }
+}
+
+body {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-family: 'Microsoft JhengHei', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    background-color: #dedede;
+    overflow-x: hidden;
+}
+
+footer {
+    width: 100%;
+    height: fit-content;
+    color: #fff;
+}
+
+    footer .row {
+        padding: 4% 0 2% 0;
+        text-align: left;
+    }
+
+        footer .row .row {
+            padding: 0;
+        }
+
+    footer .link-tilte {
+        font-size: 1.35rem;
+    }
+
+    footer a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            color: #adadad;
+        }
+
+        footer a:visited {
+            color: inherit;
+            text-decoration: none;
+        }
+
+    footer li {
+        margin-bottom: 15px;
+    }
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.65s ease-in-out, transform 0.65s ease-in-out;
+    transform: translateY(75px);
+}
+
+.carousel-item {
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+}
+
+.img-contact {
+    width: 100%;
+    padding: 5%;
+}
+
+
+.block-img {
+    width: 100%;
+    background-color: #dedede;
+}
+
+    .block-img img {
+        height: 50%;
+    }
+
+.blockW {
+    width: 100%;
+    height: fit-content;
+    background-color: #dedede;
+    text-align: center;
+    color: #000000;
+}
+
+.blockB {
+    width: 100%;
+    height: fit-content;
+    background-color: #1493A6;
+    text-align: center;
+    color: #fff;
+}
+
+.row {
+    padding: 3.5% 0;
+}
+
+@media(max-width: 1200px) {
+    .row {
+        padding: 7% 0;
+    }
+}
+
+.contact-block {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.title {
+    font-size: 2.25rem;
+    padding: 5% 15%;
+}
+
+.tilte-long {
+    font-size: 2.25rem;
+    padding: 5.5% 15% 0 15%;
+}
+
+@media(max-width: 1400px) {
+    .tilte-long {
+        font-size: 2.25rem;
+        padding: 8.5% 15% 0 15%;
+    }
+}
+
+.detail {
+    font-size: 1.35rem;
+    text-align: justify;
+    padding: 5% 15%;
+}
+
+.detail-long {
+    font-size: 1.35rem;
+    padding: 4% 15% 1.8% 15%;
+}
+
+@media(max-width: 1400px) {
+    .detail-long {
+        font-size: 1.35rem;
+        padding: 4% 15% 3.35% 15%;
+    }
+}
+
+.line {
+    padding: 5px 0;
+    font-size: inherit;
+}
+
+.map {
+    width: 70%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    padding: 5% 0;
+    border: none;
+    background: inherit;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.uppadding {
+    padding: 4.5% 0;
+    text-align: left;
+}
+
+@media(max-width: 1200px) {
+    .uppadding {
+        padding: 9% 0;
+    }
+}
+
+.h72vh {
+    height: 72vh;
+}
+
+iframe, .w-85 {
+    width: 85%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background-color: #fff;
+    border: 3px solid rgba(75, 75, 75, 0.7);
+}
+
+.d-flex-center {
+    justify-content: center;
+    align-items: stretch;
+}
+
+table {
+    border-collapse: separate;
+}
+
+th {
+    line-height: 3.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+td {
+    line-height: 3.5rem;
+}
+
+tr:nth-child(even) {
+    background-color: #CCC
+}
+
+tr:nth-child(odd) {
+    background-color: #FAFAFA;
+}

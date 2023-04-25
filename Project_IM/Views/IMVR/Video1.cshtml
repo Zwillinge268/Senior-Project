@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Project_IM.Models.Video>
+
+<div class="uppadding">
+    <div class="container">
+        <a class="btn btn-ct" href="@Url.Action("Video2", "IMVR")">嘗試單一搜尋</a>
+    </div>   
+</div>
+@{
+    ViewBag.Title = "影片導覽";
+    Html.RenderAction("_SelectPlace");
+}
+@if (ViewBag.HaveData != false)
+{
+    int i = 0;
+    <hr />
+    <br />
+    <br />
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.開始地點)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.結束地點)
+            </th>
+            <th>
+                選擇
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            i++;
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Place_name1.地點名稱)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Place_name.地點名稱)
+                </td>
+                <td>
+                    <button id="catchUrl-@i" value="@item.影片ID" class="btn btn-ct">立即觀看</button>
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+    <br />
+    <hr />
+}
+<div id="youtube" class="container text-center uppadding"></div>

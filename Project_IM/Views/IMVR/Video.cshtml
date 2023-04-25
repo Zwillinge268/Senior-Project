@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "校園導覽";
+}
+
+<div class="row nopadding">
+    <div class="col-md-6">
+        <div class="blockB uppadding h72vh">
+            <div class="contact-block">
+                <div class="title">
+                    想要到處遊覽？
+                </div>
+                <div class="detail">
+                    在這裏將會把你選擇的地點相關影片全部送上，讓你快速了解學校環境
+                </div>
+                <div class="container">
+                    <a href="@Url.Action("Video1", "IMVR")">
+                        <button class="custom-btnB btnInfoB">
+                            立即開始
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="blockW uppadding h72vh">
+            <div class="contact-block">
+                <div class="title">
+                    確定行走路徑？
+                </div>
+                <div class="detail">                    
+                    在這裏你能以開始與結束地點搜尋相應的路徑，讓你先行體驗相關路線
+                </div>
+                <div class="container">
+                    <a href="@Url.Action("Video2", "IMVR")">
+                        <button class="custom-btnW btnInfoW">
+                            立即開始
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
