@@ -3,12 +3,13 @@
 <div class="uppadding">
     <div class="container">
         <a class="btn btn-ct" href="@Url.Action("Video2", "IMVR")">嘗試單一搜尋</a>
-    </div>   
+    </div>
+    @{
+        ViewBag.Title = "影片導覽";
+        Html.RenderAction("_SelectPlace");
+    }
 </div>
-@{
-    ViewBag.Title = "影片導覽";
-    Html.RenderAction("_SelectPlace");
-}
+
 @if (ViewBag.HaveData != false)
 {
     int i = 0;
@@ -48,4 +49,4 @@
     <br />
     <hr />
 }
-<div id="youtube" class="container text-center uppadding"></div>
+<div id="youtube" class="container text-center uppadding btpadding"></div>
